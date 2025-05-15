@@ -32,6 +32,7 @@ func main() {
 
 	// Routes
 	r.GET("/quotes", handlers.ListQuotes(database))
+	r.GET("/quotes/random", handlers.RandomQuote(database))
 
 	// Start server
 	r.Run(":3000")

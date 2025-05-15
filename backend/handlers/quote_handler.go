@@ -94,3 +94,30 @@ func ListQuotes(db *sql.DB) gin.HandlerFunc {
 		})
 	}
 }
+
+func RandomQuote(db *sql.DB) gin.HandlerFunc {
+	return func(c *gin.Context) {
+		row := db.QueryRow(`
+		SELECT
+		  id,
+			quote,
+			author,
+			book
+		FROM
+			quotes
+		ORDER BY
+			RANDOM()
+		LIMIT
+			1
+		`)
+
+		var q models.Quote
+		err := row.Scan(&q.ID, &q.Quote, &q.Author, &q.Book)
+		if err != nil {
+			c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+			return
+		}
+
+		c.JSON(http.StatusOK, q)
+	}
+}
