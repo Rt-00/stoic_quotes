@@ -1,3 +1,4 @@
+import { Modal } from "@/components/modal";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import axios from "axios";
@@ -54,6 +55,17 @@ export const QuoteListPage = () => {
       <div className="flex justify-end mb-6">
         <Button onClick={fetchRandomQuote}>Get Random Quote</Button>
       </div>
+
+      {/* Modal */}
+      {randomQuote && (
+        <Modal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          quote={randomQuote.quote}
+          author={randomQuote.author}
+          book={randomQuote.book}
+        />
+      )}
     </div>
   );
 };
