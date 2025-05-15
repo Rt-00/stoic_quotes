@@ -1,0 +1,16 @@
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Teste Binary
+*.test
+
+# Go workspace file
+go.work
+go.work.sum
+
+# ENV file
+.env
