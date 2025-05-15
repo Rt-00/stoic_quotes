@@ -77,13 +77,13 @@ Frontend will be available at: `http://localhost:5173`.
 
 ## 📝 Features
 
-- ✅ List quotes with filters by Author, Book, and Text.
+- ✅ List quotes with filters by **Author**, **Book**, and **Text**.
 - ✅ Pagination with layout stability (no shifting).
-- ✅ Debounced filtering to avoid excessive API calls.
 - ✅ Random Quote modal popup.
 - ✅ Scrollbar for long quotes.
-- ✅ Backend full-text search index (FTS5 in SQLite).
+- ✅ Backend full-text search index (SQLite).
 - ✅ Modular Clean Architecture (Go backend).
+- ✅ CSV bulk import for initial data load.
 
 ---
 
