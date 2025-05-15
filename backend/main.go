@@ -1,5 +1,9 @@
 package main
 
+import "stoic_quotes/db"
+
 func main() {
-	print("REST API GO LANG")
+	// Connecting to the database
+	database := db.Connect()
+	defer database.Close()
 }
