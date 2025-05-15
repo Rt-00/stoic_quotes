@@ -30,8 +30,8 @@ A Fullstack application to search, filter, and explore book quotes, with a **Go 
 
 ### Prerequisites:
 
-- Go 1.24+
-- Node.js 22+
+- Go 1.21+
+- Node.js 18+
 - SQLite3
 
 ### Clone the repository:
@@ -89,6 +89,7 @@ Frontend will be available at: `http://localhost:5173`.
 
 ## 📦 Folder Structure
 
+```
 backend
 ├── db
 │   └── db.go
@@ -105,7 +106,9 @@ backend
 ├── service
 │   └── import_service.go
 └── stoic_quotes_full.csv
+```
 
+```
 frontend/src
 ├── App.tsx
 ├── assets
@@ -125,7 +128,7 @@ frontend/src
 ├── pages
 │   └── quote-list-page.tsx
 └── vite-env.d.ts
-
+```
 ---
 
 ## 📄 API Endpoints
