@@ -1,16 +1,19 @@
 # Binaries
-*.exe
-*.exe~
-*.dll
-*.so
-*.dylib
+backend/*.exe
+backend/*.exe~
+backend/*.dll
+backend/*.so
+backend/*.dylib
 
 # Teste Binary
-*.test
+backend/*.test
 
 # Go workspace file
-go.work
-go.work.sum
+backend/go.work
+backend/go.work.sum
 
 # ENV file
-.env
+backend/.env
+
+# Database
+backend/*.db
