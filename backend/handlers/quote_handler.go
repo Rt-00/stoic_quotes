@@ -14,12 +14,12 @@ func ListQuotes(db *sql.DB) gin.HandlerFunc {
 	return func(c *gin.Context) {
 		author := c.Query("author")
 		book := c.Query("book")
-		query := c.Query("query")
+		query := c.Query("q")
 		page := c.DefaultQuery("page", "1")
 		perPage := c.DefaultQuery("per_page", "10")
 
 		var where []string
-		var args []interface{}
+		var args []any
 
 		if author != "" {
 			where = append(where, "LOWER(author) LIKE ?")
@@ -76,7 +76,7 @@ func ListQuotes(db *sql.DB) gin.HandlerFunc {
 		}
 		defer rows.Close()
 
-		var quotes []models.Quote
+		quotes := []models.Quote{}
 		for rows.Next() {
 			var q models.Quote
 			rows.Scan(&q.ID, &q.Quote, &q.Author, &q.Book)
