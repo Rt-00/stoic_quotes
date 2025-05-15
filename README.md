@@ -30,8 +30,8 @@ A Fullstack application to search, filter, and explore book quotes, with a **Go 
 
 ### Prerequisites:
 
-- Go 1.21+
-- Node.js 18+
+- Go 1.24+
+- Node.js 22+
 - SQLite3
 
 ### Clone the repository:
